@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "idkyet:block/raw_ryan_block"
+  }
+}

@@ -6,7 +6,6 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,11 +15,17 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     //Where new blocks are added
     public static final Block RYAN_BLOCK = registerBlock("ryan_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block NATHAN_BLOCK = registerBlock("nathan_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.STONE)));
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+    public static final Block RAW_RYAN_BLOCK = registerBlock("raw_ryan_block",
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.AMETHYST_CLUSTER)));
+    public static final Block RAW_NATHAN_BLOCK = registerBlock("raw_nathan_block",
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
 
 
 
@@ -43,6 +48,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.RYAN_BLOCK);
             entries.add(ModBlocks.NATHAN_BLOCK);
+            entries.add(ModBlocks.RAW_RYAN_BLOCK);
+            entries.add(ModBlocks.RAW_NATHAN_BLOCK);
         });
     }
 }
