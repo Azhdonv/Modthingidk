@@ -21,19 +21,19 @@ public class ModBlocks {
                     .requiresTool().resistance(3f).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block NATHAN_BLOCK = registerBlock("nathan_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
-                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
     public static final Block RAW_RYAN_BLOCK = registerBlock("raw_ryan_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
-                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.AMETHYST_CLUSTER)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
     public static final Block RAW_NATHAN_BLOCK = registerBlock("raw_nathan_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
-                    .requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
     public static final Block RYAN_ORE = registerBlock("ryan_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
     public static final Block NATHAN_ORE = registerBlock("nathan_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
 
 
