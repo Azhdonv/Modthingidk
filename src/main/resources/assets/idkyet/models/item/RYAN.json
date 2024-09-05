@@ -1,8 +1,0 @@
-{
-  //Parent shows how the item will be rendered in game,
-  //Texutres looks in the textures folder to display the texture on the item.
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "idkyet:item/ryan"
-  }
-}
