@@ -1,5 +1,6 @@
 package net.av.idkyet;
 
+import net.av.idkyet.block.ModBlocks;
 import net.av.idkyet.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +14,7 @@ public class IdkYet implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

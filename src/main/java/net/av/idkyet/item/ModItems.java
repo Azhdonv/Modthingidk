@@ -17,7 +17,7 @@ public class ModItems {
     public static final Item RAW_NATHAN = registerItem("raw_nathan", new Item(new Item.Settings()));
 
 
-    //Function used to create new items
+    //Helper methods to create items
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(IdkYet.MOD_ID, name), item);
 
