@@ -20,7 +20,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block NATHAN_BLOCK = registerBlock("nathan_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.BAMBOO)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
 
 
 
