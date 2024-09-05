@@ -4,6 +4,7 @@ import net.av.idkyet.IdkYet;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -11,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     //Where new blocks are added
@@ -26,6 +28,12 @@ public class ModBlocks {
     public static final Block RAW_NATHAN_BLOCK = registerBlock("raw_nathan_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+    public static final Block RYAN_ORE = registerBlock("ryan_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
+    public static final Block NATHAN_ORE = registerBlock("nathan_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool().resistance(3f).sounds(BlockSoundGroup.STONE)));
 
 
 
@@ -44,12 +52,19 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         IdkYet.LOGGER.info("Registering Mod Blocks for " + IdkYet.MOD_ID);
-        //Add blocks to creative mode tab
+        //Add blocks to "Building Blocks" creative mode tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.RYAN_BLOCK);
             entries.add(ModBlocks.NATHAN_BLOCK);
             entries.add(ModBlocks.RAW_RYAN_BLOCK);
             entries.add(ModBlocks.RAW_NATHAN_BLOCK);
+        //Blocks to "Natural" Creative mode tab
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.RYAN_ORE);
+            entries.add(ModBlocks.NATHAN_ORE);
+
+        });
+
     }
 }

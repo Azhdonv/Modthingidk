@@ -5,8 +5,13 @@
   "item.idkyet.raw_nathan": "Raw Nathan",
 
 
+  "block.idkyet.ryan_ore": "Ryan Ore",
+  "block.idkyet.nathan_ore": "Nathan Ore",
+
+
   "block.idkyet.ryan_block": "Ryan Block",
   "block.idkyet.nathan_block": "Nathan Block",
+
   "block.idkyet.raw_ryan_block": "Raw Ryan Block",
   "block.idkyet.raw_nathan_block": "Raw Nathan Block"
 }
