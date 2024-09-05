@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "idkyet",
+	"version": "${version}",
+	"name": "IdkYet",
+	"description": "Not sure yet, we will see",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/idkyet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.av.idkyet.IdkYet"
+		],
+		"fabric-datagen": [
+			"net.av.idkyet.IdkYetDataGenerator"
+		],
+		"client": [
+			"net.av.idkyet.IdkYetClient"
+
+		]
+	},
+	"mixins": [
+		"idkyet.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
